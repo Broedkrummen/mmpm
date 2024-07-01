@@ -8,7 +8,8 @@
     "gcc13Stdenv.cc.cc.lib"
   ],
   "env": {
-    "VENV_DIR": "$PWD/.venv"
+    "VENV_DIR": "$PWD/.venv",
+    "LD_LIBRARY_PATH": "$PWD/.devbox/nix/profile/default/lib"
   },
   "shell": {
     "init_hook": [
