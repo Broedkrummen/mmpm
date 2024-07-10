@@ -13,7 +13,7 @@ from shutil import rmtree, which
 from sys import executable
 
 from mmpm.__version__ import version
-from mmpm.constants import urls
+from mmpm.constants import urls, paths
 from mmpm.log.factory import MMPMLogFactory
 from mmpm.singleton import Singleton
 from mmpm.utils import run_cmd
@@ -32,7 +32,7 @@ class MMPMui(Singleton):
         gunicorn = which("gunicorn") or f"{python} -m gunicorn"
         namespace = "mmpm"
 
-        self.pm2_config_path = Path("/tmp/mmpm/ecosystem.json")
+        self.pm2_config_path = paths.MMPM_CONFIG_DIR / "ecosystem.json"
 
         self.pm2_ecosystem_config = {
             "apps": [
