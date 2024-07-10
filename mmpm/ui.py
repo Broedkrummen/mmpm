@@ -8,7 +8,6 @@ else:
 
 import json
 import os
-from pathlib import Path
 from shutil import rmtree, which
 from sys import executable
 
